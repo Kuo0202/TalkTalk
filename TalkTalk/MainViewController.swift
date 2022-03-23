@@ -9,10 +9,7 @@ import UIKit
 import CocoaMQTT
 
 class MainViewController: UIViewController {
-
-    print("testest")
     let defaultHost = "orange-sea.site"
-    let defaultPort = 443
 
     var mqtt5: CocoaMQTT5?
     var mqtt: CocoaMQTT?
@@ -85,12 +82,12 @@ class MainViewController: UIViewController {
 
         if mqttVesion == "3.1.1" {
 
-            let clientID = "CocoaMQTT-\(animal!)-" + String(ProcessInfo().processIdentifier)
+            let clientID = "CocoaMQTT-\(animal!)-" + String(ProcessInfo().processIdentifier) + UUID().uuidString
             mqtt = CocoaMQTT(clientID: clientID, host: defaultHost, port: 1883)
             //mqtt!.logLevel = .debug
             mqtt!.username = ""
             mqtt!.password = ""
-            mqtt!.willMessage = CocoaMQTTMessage(topic: "/will", string: "dieout")
+            mqtt!.willMessage = CocoaMQTTMessage(topic: "test", string: "吃餅")
             mqtt!.keepAlive = 60
             mqtt!.delegate = self
             //mqtt!.autoReconnect = true

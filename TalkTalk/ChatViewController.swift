@@ -66,7 +66,7 @@ class ChatViewController: UIViewController {
         publishProperties.contentType = "JSON"
 
         if mqttVersion == "3.1.1" {
-            mqtt!.publish("test" + animal!, withString: message!, qos: .qos1)
+            mqtt!.publish("test", withString: message!, qos: .qos1)
         }else if mqttVersion == "5.0" {
             mqtt5!.publish("test" + animal!, withString: message!, qos: .qos1, DUP: true, retained: false, properties: publishProperties)
         }

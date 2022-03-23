@@ -301,7 +301,7 @@ public class CocoaMQTT5: NSObject, CocoaMQTT5Client {
         self.socket = socket
         super.init()
         deliver.delegate = self
-        if let storage = CocoaMQTTStorage(by: clientID) {
+        if let storage = CocoaMQTTStorage() {
             storage.setMQTTVersion("5.0")
         } else {
             printWarning("Localstorage initial failed for key: \(clientID)")
@@ -443,14 +443,18 @@ public class CocoaMQTT5: NSObject, CocoaMQTT5Client {
     ///    - string: Payload string
     ///    - qos: Qos. Default is Qos1
     ///    - retained: Retained flag. Mark this message is a retained message. default is false
+    ///    - properties: Publish Properties
     /// - Returns:
     ///     - 0 will be returned, if the message's qos is qos0
     ///     - 1-65535 will be returned, if the messages's qos is qos1/qos2
     ///     - -1 will be returned, if the messages queue is full
     @discardableResult
-    public func publish(_ topic: String, withString string: String, qos: CocoaMQTTQoS = .qos1, DUP: Bool = false
-                        , retained: Bool = false, properties: MqttPublishProperties) -> Int {
-        let message = CocoaMQTT5Message(topic: topic, string: string, qos: qos, retained: retained)
+    public func publish(_ topic: String, withString string: String, qos: CocoaMQTTQoS = .qos1, DUP: Bool = false, retained: Bool = false, properties: MqttPublishProperties) -> Int {
+        var fixQus = qos
+        if !DUP{
+            fixQus = .qos0
+        }
+        let message = CocoaMQTT5Message(topic: topic, string: string, qos: fixQus, retained: retained)
         return publish(message, DUP: DUP, retained: retained, properties: properties)
     }
 
@@ -458,6 +462,7 @@ public class CocoaMQTT5: NSObject, CocoaMQTT5Client {
     ///
     /// - Parameters:
     ///   - message: Message
+    ///   - properties: Publish Properties
     @discardableResult
     public func publish(_ message: CocoaMQTT5Message, DUP: Bool = false, retained: Bool = false, properties: MqttPublishProperties) -> Int {
         let msgid: UInt16
@@ -474,8 +479,8 @@ public class CocoaMQTT5: NSObject, CocoaMQTT5Client {
                                  payload: message.payload,
                                  qos: message.qos,
                                  msgid: msgid)
-        frame.QoS = message.qos
-        frame.DUP = DUP
+        frame.qos = message.qos
+        frame.dup = DUP
         frame.publishProperties = properties
         frame.retained = message.retained
 
@@ -661,7 +666,7 @@ extension CocoaMQTT5: CocoaMQTTSocketDelegate {
 
 // MARK: - CocoaMQTTReaderDelegate
 extension CocoaMQTT5: CocoaMQTTReaderDelegate {
-    
+
     func didReceive(_ reader: CocoaMQTTReader, disconnect: FrameDisconnect) {
         delegate?.mqtt5(self, didReceiveDisconnectReasonCode: disconnect.receiveReasonCode!)
         didDisconnectReasonCode(self, disconnect.receiveReasonCode!)

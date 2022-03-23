@@ -286,7 +286,7 @@ public class CocoaMQTT: NSObject, CocoaMQTTClient {
         self.socket = socket
         super.init()
         deliver.delegate = self
-        if let storage = CocoaMQTTStorage(by: clientID) {
+        if let storage = CocoaMQTTStorage() {
             storage.setMQTTVersion("3.1.1")
         } else {
             printWarning("Localstorage initial failed for key: \(clientID)")
@@ -612,14 +612,6 @@ extension CocoaMQTT: CocoaMQTTSocketDelegate {
 // MARK: - CocoaMQTTReaderDelegate
 extension CocoaMQTT: CocoaMQTTReaderDelegate {
     
-    func didReceive(_ reader: CocoaMQTTReader, disconnect: FrameDisconnect) {
-
-    }
-    
-    func didReceive(_ reader: CocoaMQTTReader, auth: FrameAuth) {
-        
-    }
-    
     func didReceive(_ reader: CocoaMQTTReader, connack: FrameConnAck) {
         printDebug("RECV: \(connack)")
 
@@ -719,7 +711,6 @@ extension CocoaMQTT: CocoaMQTTReaderDelegate {
 
     func didReceive(_ reader: CocoaMQTTReader, suback: FrameSubAck) {
         printDebug("RECV: \(suback)")
-        
         guard let topicsAndQos = subscriptionsWaitingAck.removeValue(forKey: suback.msgid) else {
             printWarning("UNEXPECT SUBACK Received: \(suback)")
             return
