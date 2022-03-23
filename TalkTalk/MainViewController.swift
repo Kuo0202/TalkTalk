@@ -10,6 +10,7 @@ import CocoaMQTT
 
 class MainViewController: UIViewController {
 
+    print("testest")
     let defaultHost = "orange-sea.site"
     let defaultPort = 443
 
