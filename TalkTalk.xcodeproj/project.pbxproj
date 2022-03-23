@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B18231AC27EACF7700D715F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231AB27EACF7700D715F5 /* AppDelegate.swift */; };
+		B18231AE27EACF7700D715F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231AD27EACF7700D715F5 /* SceneDelegate.swift */; };
+		B18231B027EACF7700D715F5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231AF27EACF7700D715F5 /* ChatViewController.swift */; };
+		B18231B327EACF7700D715F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18231B127EACF7700D715F5 /* Main.storyboard */; };
+		B18231B527EACF7A00D715F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18231B427EACF7A00D715F5 /* Assets.xcassets */; };
+		B18231B827EACF7A00D715F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18231B627EACF7A00D715F5 /* LaunchScreen.storyboard */; };
+		B18231C027EAD48200D715F5 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231BF27EAD48200D715F5 /* ChatMessage.swift */; };
+		B18231C227EAFD5700D715F5 /* ChatRightMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231C127EAFD5700D715F5 /* ChatRightMessageCell.swift */; };
+		B18231C427EAFDA500D715F5 /* ChatLeftMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231C327EAFDA500D715F5 /* ChatLeftMessageCell.swift */; };
+		B18231C627EB029100D715F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231C527EB029000D715F5 /* MainViewController.swift */; };
+		B66D5FBE04B9EBD93DB8C077 /* Pods_TalkTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A21449537B16CCC67C611E8 /* Pods_TalkTalk.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A21449537B16CCC67C611E8 /* Pods_TalkTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7666795A68F089EBDF3A19AF /* Pods-TalkTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkTalk.release.xcconfig"; path = "Target Support Files/Pods-TalkTalk/Pods-TalkTalk.release.xcconfig"; sourceTree = "<group>"; };
+		B18231A827EACF7700D715F5 /* TalkTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B18231AB27EACF7700D715F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B18231AD27EACF7700D715F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B18231AF27EACF7700D715F5 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B18231B227EACF7700D715F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B18231B427EACF7A00D715F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B18231B727EACF7A00D715F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B18231B927EACF7A00D715F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B18231BF27EAD48200D715F5 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		B18231C127EAFD5700D715F5 /* ChatRightMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRightMessageCell.swift; sourceTree = "<group>"; };
+		B18231C327EAFDA500D715F5 /* ChatLeftMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLeftMessageCell.swift; sourceTree = "<group>"; };
+		B18231C527EB029000D715F5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B18231C727EB03C100D715F5 /* client-keycert.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "client-keycert.p12"; sourceTree = "<group>"; };
+		C16CE31F7B6A49B23C245546 /* Pods-TalkTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkTalk.debug.xcconfig"; path = "Target Support Files/Pods-TalkTalk/Pods-TalkTalk.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B18231A527EACF7700D715F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66D5FBE04B9EBD93DB8C077 /* Pods_TalkTalk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FB4166136A8BAB59D70C9D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C16CE31F7B6A49B23C245546 /* Pods-TalkTalk.debug.xcconfig */,
+				7666795A68F089EBDF3A19AF /* Pods-TalkTalk.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B182319F27EACF7700D715F5 = {
+			isa = PBXGroup;
+			children = (
+				B18231AA27EACF7700D715F5 /* TalkTalk */,
+				B18231A927EACF7700D715F5 /* Products */,
+				2FB4166136A8BAB59D70C9D1 /* Pods */,
+				E7EA6D7C2F034151392E6872 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B18231A927EACF7700D715F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B18231A827EACF7700D715F5 /* TalkTalk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B18231AA27EACF7700D715F5 /* TalkTalk */ = {
+			isa = PBXGroup;
+			children = (
+				B18231AB27EACF7700D715F5 /* AppDelegate.swift */,
+				B18231AD27EACF7700D715F5 /* SceneDelegate.swift */,
+				B18231AF27EACF7700D715F5 /* ChatViewController.swift */,
+				B18231C527EB029000D715F5 /* MainViewController.swift */,
+				B18231BF27EAD48200D715F5 /* ChatMessage.swift */,
+				B18231C127EAFD5700D715F5 /* ChatRightMessageCell.swift */,
+				B18231C327EAFDA500D715F5 /* ChatLeftMessageCell.swift */,
+				B18231B127EACF7700D715F5 /* Main.storyboard */,
+				B18231C727EB03C100D715F5 /* client-keycert.p12 */,
+				B18231B427EACF7A00D715F5 /* Assets.xcassets */,
+				B18231B627EACF7A00D715F5 /* LaunchScreen.storyboard */,
+				B18231B927EACF7A00D715F5 /* Info.plist */,
+			);
+			path = TalkTalk;
+			sourceTree = "<group>";
+		};
+		E7EA6D7C2F034151392E6872 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A21449537B16CCC67C611E8 /* Pods_TalkTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B18231A727EACF7700D715F5 /* TalkTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B18231BC27EACF7A00D715F5 /* Build configuration list for PBXNativeTarget "TalkTalk" */;
+			buildPhases = (
+				421C6BFE3CD7963BC8BEA721 /* [CP] Check Pods Manifest.lock */,
+				B18231A427EACF7700D715F5 /* Sources */,
+				B18231A527EACF7700D715F5 /* Frameworks */,
+				B18231A627EACF7700D715F5 /* Resources */,
+				B85E8404EDF6C4B56D296325 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TalkTalk;
+			productName = TalkTalk;
+			productReference = B18231A827EACF7700D715F5 /* TalkTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B18231A027EACF7700D715F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					B18231A727EACF7700D715F5 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = B18231A327EACF7700D715F5 /* Build configuration list for PBXProject "TalkTalk" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B182319F27EACF7700D715F5;
+			productRefGroup = B18231A927EACF7700D715F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B18231A727EACF7700D715F5 /* TalkTalk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B18231A627EACF7700D715F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18231B827EACF7A00D715F5 /* LaunchScreen.storyboard in Resources */,
+				B18231B527EACF7A00D715F5 /* Assets.xcassets in Resources */,
+				B18231B327EACF7700D715F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		421C6BFE3CD7963BC8BEA721 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TalkTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B85E8404EDF6C4B56D296325 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TalkTalk/Pods-TalkTalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TalkTalk/Pods-TalkTalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TalkTalk/Pods-TalkTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B18231A427EACF7700D715F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18231C627EB029100D715F5 /* MainViewController.swift in Sources */,
+				B18231B027EACF7700D715F5 /* ChatViewController.swift in Sources */,
+				B18231C227EAFD5700D715F5 /* ChatRightMessageCell.swift in Sources */,
+				B18231C027EAD48200D715F5 /* ChatMessage.swift in Sources */,
+				B18231AC27EACF7700D715F5 /* AppDelegate.swift in Sources */,
+				B18231C427EAFDA500D715F5 /* ChatLeftMessageCell.swift in Sources */,
+				B18231AE27EACF7700D715F5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B18231B127EACF7700D715F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B18231B227EACF7700D715F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B18231B627EACF7A00D715F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B18231B727EACF7A00D715F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B18231BA27EACF7A00D715F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B18231BB27EACF7A00D715F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B18231BD27EACF7A00D715F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C16CE31F7B6A49B23C245546 /* Pods-TalkTalk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JL6Y27T9JW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TalkTalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryant.TalkTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B18231BE27EACF7A00D715F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7666795A68F089EBDF3A19AF /* Pods-TalkTalk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JL6Y27T9JW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TalkTalk/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryant.TalkTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B18231A327EACF7700D715F5 /* Build configuration list for PBXProject "TalkTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B18231BA27EACF7A00D715F5 /* Debug */,
+				B18231BB27EACF7A00D715F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B18231BC27EACF7A00D715F5 /* Build configuration list for PBXNativeTarget "TalkTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B18231BD27EACF7A00D715F5 /* Debug */,
+				B18231BE27EACF7A00D715F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B18231A027EACF7700D715F5 /* Project object */;
+}
