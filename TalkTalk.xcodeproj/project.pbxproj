@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1087F772806DD57005DC040 /* AppleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1087F762806DD57005DC040 /* AppleLoginViewController.swift */; };
 		B18231AC27EACF7700D715F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231AB27EACF7700D715F5 /* AppDelegate.swift */; };
 		B18231AE27EACF7700D715F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231AD27EACF7700D715F5 /* SceneDelegate.swift */; };
 		B18231B027EACF7700D715F5 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18231AF27EACF7700D715F5 /* ChatViewController.swift */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		6A21449537B16CCC67C611E8 /* Pods_TalkTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalkTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7666795A68F089EBDF3A19AF /* Pods-TalkTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalkTalk.release.xcconfig"; path = "Target Support Files/Pods-TalkTalk/Pods-TalkTalk.release.xcconfig"; sourceTree = "<group>"; };
+		B1087F752806DC80005DC040 /* TalkTalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TalkTalk.entitlements; sourceTree = "<group>"; };
+		B1087F762806DD57005DC040 /* AppleLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginViewController.swift; sourceTree = "<group>"; };
 		B18231A827EACF7700D715F5 /* TalkTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B18231AB27EACF7700D715F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B18231AD27EACF7700D715F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		B18231AA27EACF7700D715F5 /* TalkTalk */ = {
 			isa = PBXGroup;
 			children = (
+				B1087F752806DC80005DC040 /* TalkTalk.entitlements */,
 				B18231AB27EACF7700D715F5 /* AppDelegate.swift */,
 				B18231AD27EACF7700D715F5 /* SceneDelegate.swift */,
 				B18231AF27EACF7700D715F5 /* ChatViewController.swift */,
@@ -89,6 +93,7 @@
 				B18231C127EAFD5700D715F5 /* ChatRightMessageCell.swift */,
 				B18231C327EAFDA500D715F5 /* ChatLeftMessageCell.swift */,
 				B18231B127EACF7700D715F5 /* Main.storyboard */,
+				B1087F762806DD57005DC040 /* AppleLoginViewController.swift */,
 				B18231C727EB03C100D715F5 /* client-keycert.p12 */,
 				B18231B427EACF7A00D715F5 /* Assets.xcassets */,
 				B18231B627EACF7A00D715F5 /* LaunchScreen.storyboard */,
@@ -223,6 +228,7 @@
 				B18231C627EB029100D715F5 /* MainViewController.swift in Sources */,
 				B18231B027EACF7700D715F5 /* ChatViewController.swift in Sources */,
 				B18231C227EAFD5700D715F5 /* ChatRightMessageCell.swift in Sources */,
+				B1087F772806DD57005DC040 /* AppleLoginViewController.swift in Sources */,
 				B18231C027EAD48200D715F5 /* ChatMessage.swift in Sources */,
 				B18231AC27EACF7700D715F5 /* AppDelegate.swift in Sources */,
 				B18231C427EAFDA500D715F5 /* ChatLeftMessageCell.swift in Sources */,
@@ -302,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -356,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -372,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TalkTalk/TalkTalk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JL6Y27T9JW;
@@ -402,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TalkTalk/TalkTalk.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JL6Y27T9JW;
