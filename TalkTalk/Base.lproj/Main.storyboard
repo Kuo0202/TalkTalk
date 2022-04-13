@@ -464,7 +464,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPQ-9W-qCd">
-                                <rect key="frame" x="10" y="408" width="394" height="80"/>
+                                <rect key="frame" x="20" y="408" width="374" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="fJC-lt-064"/>
@@ -476,8 +476,8 @@
                         <constraints>
                             <constraint firstItem="hPQ-9W-qCd" firstAttribute="centerY" secondItem="4gv-Hz-DMc" secondAttribute="centerY" id="2XE-Le-c37"/>
                             <constraint firstItem="hPQ-9W-qCd" firstAttribute="centerX" secondItem="4gv-Hz-DMc" secondAttribute="centerX" id="DaT-HF-mPv"/>
-                            <constraint firstItem="hPQ-9W-qCd" firstAttribute="leading" secondItem="dBS-am-2sa" secondAttribute="leading" constant="10" id="Wu3-en-0Ch"/>
-                            <constraint firstItem="dBS-am-2sa" firstAttribute="trailing" secondItem="hPQ-9W-qCd" secondAttribute="trailing" constant="10" id="yeJ-Nj-NUP"/>
+                            <constraint firstItem="hPQ-9W-qCd" firstAttribute="leading" secondItem="dBS-am-2sa" secondAttribute="leading" constant="20" id="Wu3-en-0Ch"/>
+                            <constraint firstItem="dBS-am-2sa" firstAttribute="trailing" secondItem="hPQ-9W-qCd" secondAttribute="trailing" constant="20" id="yeJ-Nj-NUP"/>
                         </constraints>
                     </view>
                     <connections>
