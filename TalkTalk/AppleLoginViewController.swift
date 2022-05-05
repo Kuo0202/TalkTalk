@@ -90,32 +90,46 @@ extension AppleLoginViewController {
     
     func registerUser(userID: String, realName: String, email: String, completion: @escaping ([String: Any]?, Error?) -> Void) {
         
-        let body: [String: Any] = ["userID": userID, "realName": realName, "Email": email, ]
-        let api_url = "https://orange-sea.site/talk/register"
-        let url = URL(string: api_url)!
-        var request = URLRequest(url: url)
-        
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
-            request.httpBody = jsonData
-        } catch let e {
-            print(e)
-        }
-        
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                print(error?.localizedDescription ?? "No data")
-                return
+//        let body: [String: Any] = ["userID": userID, "realName": realName, "Email": email, ]
+//        let api_url = "https://orange-sea.site/talk/register"
+//        let url = URL(string: api_url)!
+//        var request = URLRequest(url: url)
+//
+//        do {
+//            let jsonData = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+//            request.httpBody = jsonData
+//        } catch let e {
+//            print(e)
+//        }
+//
+//        request.httpMethod = "POST"
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard let data = data, error == nil else {
+//                print(error?.localizedDescription ?? "No data")
+//                return
+//            }
+//            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+//            if let responseJSON = responseJSON as? [String: Any] {
+//                print(responseJSON)
+//            }
+//        }
+//
+//        task.resume()
+    }
+
+    func registerUserRequest() {
+
+        RegisterUserRequest(userInfoBody: RegisterUserBody(userID: "", realName: "", Email: "")).send { result in
+
+            switch result {
+                case .success(let response):
+                    print("success \(response.result)")
+
+                case .failure(let error):
+                    print("error \(error)")
             }
-            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            if let responseJSON = responseJSON as? [String: Any] {
-                print(responseJSON)
-            }
         }
-        
-        task.resume()
     }
 }
